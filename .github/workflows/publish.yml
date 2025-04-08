@@ -8,6 +8,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      id-token: write  # Add this line to ensure id-token permissions
+
     steps:
     - uses: actions/checkout@v3
 
