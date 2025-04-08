@@ -1,7 +1,7 @@
 import unittest
 import time
 import threading
-from token_bucket.hierarchical import HierarchicalTokenBucket, create_bucket_hierarchy
+from bucketflow.hierarchical import HierarchicalTokenBucket, create_bucket_hierarchy
 
 
 class TestHierarchicalTokenBucket(unittest.TestCase):
