@@ -15,6 +15,10 @@ with open(os.path.join("bucketflow", "__init__.py"), "r", encoding="utf-8") as f
     else:
         raise RuntimeError("Unable to find version string in __init__.py")
 
+# Disable setuptools from generating certain metadata that's causing issues
+import setuptools
+setuptools.config.pyprojecttoml.apply_configuration = lambda *args, **kwargs: {}
+
 setup(
     name="bucketflow",
     version=version,
@@ -57,4 +61,5 @@ setup(
         ],
     },
     keywords="rate-limiting token-bucket throttling api hierarchical-rate-limiting",
+    license="MIT",
 )
